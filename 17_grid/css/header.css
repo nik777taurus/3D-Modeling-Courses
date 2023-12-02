@@ -1,0 +1,163 @@
+.header {
+  background-color: var(--color-blue);
+}
+
+.header__container {
+  position: relative;
+  min-height: 80px;
+}
+
+.header__logo {
+  width: 72px;
+  height: 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.header__nav {
+  position: absolute;
+  width: calc(100% * 2);
+  top: -80px;
+  left: 0;
+  margin: 0;
+  transform: translateX(calc(-100% - 20px));
+  transition: all .3s ease;
+  z-index: 1000;
+}
+
+.header__nav--active {
+  transform: translateX(0);
+}
+
+.header__list {
+  height: 433px;
+  padding-top: 76px;
+  padding-left: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2F2C45;
+}
+
+.header__item {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.header__item_hero,
+.header__item_about-us,
+.header__item_teachers,
+.header__item_courses {
+  width: 100%;
+  margin: 0;
+}
+
+.header__item:not(:last-child) {
+  margin-bottom: 56px;
+}
+
+.header__link {
+  max-width: 100%;
+}
+
+.header__burger {
+  display: block;
+  height: 100%;
+  background-image: url(../img/burger.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  transition: all 0.3s ease;
+}
+
+.header__burger--active {
+  background-image: url(../img/burger_active.png);
+}
+
+.burger {
+  z-index: 0;
+}
+
+.burger--active {
+  z-index: 10000;
+}
+
+@media (min-width: 576px) {
+  .header__container {
+    min-height: 133px;
+  }
+
+  .header__logo {
+    width: 94px;
+    height: 21px;
+    margin: var(--gap) auto;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__nav {
+    position: relative;
+    top: 0;
+    width: 92.157%;
+    min-height: 22px;
+    transform: none;
+  }
+
+  .header__list {
+    height: 22px;
+    min-height: 22px;
+    margin-bottom: var(--gap);
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .header__item:not(:last-child) {
+    margin: 0;
+    margin-right: 11.915%;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    min-height: 80px;
+  }
+
+  .header__logo {
+    margin-bottom: 29px;
+    margin-left: 0;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .header__nav {
+    width: 92.157%;
+  }
+
+  .header__list {
+    margin-top: 28px;
+    margin-bottom: var(--gap);
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__logo {
+    margin-left: 0;
+  }
+
+  .header__nav {
+    width: 51.087%;
+    margin-right: 0;
+  }
+}

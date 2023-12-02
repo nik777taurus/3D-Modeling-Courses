@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: local("OpenSans-Light"),
+    url("../fonts/OpenSans-Light.woff2") format("woff2"),
+    url("../fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'OpenSans', sans-serif;
+  background-color: #424242;
+}
+
+.simplebar-content-wrapper {
+  padding: 20px 30px 0 29px;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.simplebar-content {
+  height: auto;
+}
+
+.customScroll {
+  width: 399px;
+  height: 310px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: 18px;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 18px;
+}
+
+.simplebar-scrollbar {
+  height: 84px !important;
+}
+
+.simplebar-track .simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
+.simplebar-scrollbar:before {
+  right: 6px;
+  left: 6px;
+  background: #CCB26E;
+  border-radius: 3px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 7px;
+  bottom: 7px;
+}
